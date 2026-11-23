@@ -1,22 +1,16 @@
-function pintar(bolita){
-    bolita.style.background = document.getElementById('color').value;
-}
+let bolitaPrincipal = document.getElementById('bolita-principal');
 
-function pintarTodas(){
-    let bolitas = document.getElementsByClassName('bolita');
-    for(let i = 0; i < bolitas.length; i++){
-        bolitas[i].style.background = document.getElementById('color').value;
-    }
-}
+document.getElementById('color').addEventListener('change', function() {
+    colores();
+});
 
-function agregar(){
-    let bolita = document.createElement('div');
-    bolita.className = 'bolita';
-    bolita.setAttribute('onclick', 'pintar(this)');
-    document.getElementById('bolitas').appendChild(bolita);
-}
+let colores = function() {
+    bolitaPrincipal.style.backgroundColor = document.getElementById('color').value;
+};
 
-let bolitasIniciales = document.getElementsByClassName('bolita');
-for(let i = 0; i < bolitasIniciales.length; i++){
-    bolitasIniciales[i].setAttribute('onclick', 'pintar(this)');
+function agregar() {
+    let color = document.getElementById('color').value;
+
+    document.getElementById('bolitas').innerHTML += 
+        '<div class="bolita" style="background-color:' + color + ';"></div>';
 }
