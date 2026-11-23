@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolitas de color</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Javascript</h1>
+    </header>
+
+    <section>
+        <label>Elige un Color:</label>
+        <input type="color" id="color" value="#00ff00">
+        <button onclick="pintarTodas()">Pintar</button>
+        <button onclick="agregar()">Agregar</button>
+
+        <div id="bolitas">
+            <div class="bolita" onclick="pintar(this)"></div>
+            <div class="bolita" onclick="pintar(this)"></div>
+            <div class="bolita" onclick="pintar(this)"></div>
+            <div class="bolita" onclick="pintar(this)"></div>
+        </div>
+    </section>
+
+   <footer>Elaborado por Estefanía</footer>
+
+    <img src="imagenes/escarabajo.png" alt="Escarabajo morado y verde" class="imagen-abajo">
+
+    <script src="js/script.js"></script>
+</body>
+</html>
